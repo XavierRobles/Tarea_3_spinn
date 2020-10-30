@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spn_Niveles"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="181dp"
+        android:layout_marginLeft="181dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginRight="85dp"
+        android:entries="@array/Niveles"
+        android:fadeScrollbars="true"
+        app:layout_constraintEnd_toStartOf="@+id/tv_puntuacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tw_primerNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tw_operando"
+        app:layout_constraintEnd_toEndOf="@+id/btn_jugar"
+        app:layout_constraintStart_toStartOf="@+id/et_Respuesta" />
+
+    <EditText
+        android:id="@+id/et_Respuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Comprobar"
+        app:layout_constraintStart_toStartOf="@+id/btn_jugar" />
+
+    <Button
+        android:id="@+id/btn_jugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="12dp"
+        android:text="Jugar"
+        app:layout_constraintBottom_toTopOf="@+id/tw_resultado"
+        app:layout_constraintEnd_toEndOf="@+id/tw_resultado" />
+
+    <TextView
+        android:id="@+id/tw_operando"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginBottom="113dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/et_Respuesta"
+        app:layout_constraintStart_toEndOf="@+id/tw_primerNumero"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tw_segundoNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tw_operando"
+        app:layout_constraintStart_toEndOf="@+id/tw_operando" />
+
+    <TextView
+        android:id="@+id/tw_resultado"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="186dp"
+        android:layout_marginLeft="186dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="36dp"
+        android:textColor="#05DD10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_WinLose"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_WinLose"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginRight="170dp"
+        android:layout_marginBottom="43dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tw_resultado" />
+
+    <Button
+        android:id="@+id/btn_Comprobar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:text="@string/btn_comprobar"
+        app:layout_constraintBottom_toTopOf="@+id/tv_WinLose"
+        app:layout_constraintStart_toStartOf="@+id/tv_WinLose" />
+
+    <TextView
+        android:id="@+id/tv_puntuacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginRight="62dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spn_Niveles"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
